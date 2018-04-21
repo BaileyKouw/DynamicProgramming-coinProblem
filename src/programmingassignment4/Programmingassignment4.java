@@ -8,17 +8,11 @@ package programmingassignment4;
  */
 public class Programmingassignment4 {
 
+public int testInt(int i, String s1){
+    return 1;
+}
     
-    public static void main(String[] args) {
-        int amount = 63;
-        int[] array = {1,5,10,21,25};
-        int[] coinsUsed = new int[100];
-        int[] coinCounts = new int[100];
-        
-        System.out.println("Making change for "+ amount);
-        System.out.println("They are: ");
-
-    }
+    
     
     
     
@@ -27,7 +21,10 @@ public class Programmingassignment4 {
        int[] coinsUsed = new int [amt+1];               //keep track of coins needed for change
    
        /*  some pseudocode from the python example ... i think
+       
+       
         for loop searches through all coins less than amt, stores in mCoin array
+       
        
        */      
         return coinsUsed;
