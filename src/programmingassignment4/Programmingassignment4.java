@@ -1,21 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package programmingassignment4;
 
 /**
- *
- * @author kouwe
+ *  Bailey Kouwenhoven and J Beckett Sweeney.
+ *   April 24, 2018
+ * Programming Assignment 4:  Dynamic programming coin problem
  */
 public class Programmingassignment4 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public int testInt(int i, String s1){
+    return 1;
 }
+    
+    
+    
+    
+    
+    public static int[] makeChange(int[] coinList, int amt){
+       int[] mCoins = new int[amt +1];                   //keep track of min coin
+       int[] coinsUsed = new int [amt+1];               //keep track of coins needed for change
+   
+       /*  some pseudocode from the python example ... i think
+       
+       
+        for loop searches through all coins less than amt, stores in mCoin array
+       
+       
+       */      
+        return coinsUsed;
+        
+        
+    }
+}
+    
+    
+    
+   
