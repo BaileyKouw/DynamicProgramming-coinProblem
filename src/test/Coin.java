@@ -13,9 +13,8 @@ package test;
  */
 public final class Coin {
 
-    public static int[] lastUsed = new int[100];
-
     public static int[] minChange(int[] in, int inNeeded) {
+        int[] lastUsed = new int[100];
         lastUsed[0] = 0;
         lastUsed[1] = 1;
         int needed = inNeeded;
@@ -27,11 +26,11 @@ public final class Coin {
             return zero;
         } else {
             int lastUsedIter = inNeeded;
-            int[] bigChangeArr = new int[20];
+            int[] bigChangeArr = new int[30];
             int bigChangeIter = 0;
             while (lastUsedIter > 0) {
                 if (lastUsed[lastUsedIter] == 0) {
-                    find(in, lastUsedIter);
+                    find(lastUsed, in, lastUsedIter);
                 }
                 bigChangeArr[bigChangeIter] = lastUsed[lastUsedIter];
                 lastUsedIter -= lastUsed[lastUsedIter];
@@ -51,13 +50,13 @@ public final class Coin {
         }
     }
 
-    public static void find(int[] denom, int target) {
+    public static void find(int[] lastUsed, int[] denom, int target) {
         for (int i = 0; i < denom.length; i++) {
             for (int j = 0; j < denom.length; j++) {
                 if ((target % denom[i]) == 0) {
                     lastUsed[target] = denom[i];
                     return;
-                } else if ((target % denom[i]) == denom[j] && i != j) {
+                } else if ((target % denom[i]) == denom[j] && denom[j] != 1 && i != j) {
                     lastUsed[target] = denom[j];
                     return;
                 }
