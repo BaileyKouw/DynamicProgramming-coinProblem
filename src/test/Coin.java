@@ -5,8 +5,11 @@ package test;
  * Date: 21 Apr 2018
  * Overview: This program uses dynamic programming to provide the least amount of
  * 		for a requested amount with any set of denominations.
- * Special Instructions: The denomination system used must be consistent for each
+ * Special Instructions: 
+ *      - The denomination system used must be consistent for each
  * 		test for the dynamic programming array to also be consistent.
+ *      - To run on NetBeans, press alt+f6 to "Test Project" instead of 
+ *              "Run Project."
  */
 public final class Coin {
 
